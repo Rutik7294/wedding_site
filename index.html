@@ -15,11 +15,33 @@
         font-family: 'Poppins', sans-serif;
         background-color: #f9f5f8;
       }
+
+      .heart {
+        position: fixed;
+        top: -50px;
+        z-index: 10;
+        font-size: 2rem; /* Size of the heart icon */
+        color: red; /* Heart color */
+        animation: fall linear infinite;
+        opacity: 0.8;
+        pointer-events: none;
+      }
+
+      @keyframes fall {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(100vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
     </style>
   </head>
   <body class="bg-pink-50 font-sans">
     <!-- Navbar -->
-    <nav class="bg-gradient-to-r from-pink-600 to-pink-700 shadow-md fixed w-full top-0 z-50">
+    <nav class="bg-gradient-to-r from-pink-600 to-pink-700 shadow-md fixed w-full top-0 z-50 transition-transform duration-300">
       <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <div class="text-xl sm:text-2xl font-extrabold text-white">Ram ❤️ Priya</div>
         <div class="md:hidden">
@@ -170,7 +192,7 @@
         });
       });
 
-      // ✅ Corrected Countdown Date to 18th April 2025 at 7:00 PM
+      // Countdown
       const countdown = () => {
         const eventDate = new Date("2025-04-18T19:00:00").getTime();
         const now = new Date().getTime();
@@ -193,6 +215,36 @@
 
       countdown();
       setInterval(countdown, 1000);
+
+      // ✅ Navbar hide/show on scroll
+      const navbar = document.querySelector('nav');
+      let isScrolling;
+
+      window.addEventListener('scroll', () => {
+        navbar.classList.add('-translate-y-full'); // Hide navbar
+        clearTimeout(isScrolling);
+
+        isScrolling = setTimeout(() => {
+          navbar.classList.remove('-translate-y-full'); // Show navbar
+        }, 200);
+      });
+
+      // Heart Icons Animation
+      function createHeart() {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.innerHTML = '❤️'; // Using emoji as heart
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = 3 + Math.random() * 2 + 's';
+        heart.style.opacity = Math.random();
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 5000);
+      }
+
+      setInterval(createHeart, 300);
     </script>
   </body>
 </html>

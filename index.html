@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yogesh & Priya Wedding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-pink-50 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-black shadow-md fixed w-full top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="text-xl font-bold text-white">Yogesh ❤️ Priya</div>
+        <ul class="flex space-x-6 text-white font-medium">
+          <li><a href="#home" class="hover:text-pink-400">Home</a></li>
+          <li><a href="#album" class="hover:text-pink-400">Album</a></li>
+          <li><a href="#location" class="hover:text-pink-400">Location</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center pt-32 px-4 bg-gradient-to-b from-pink-100 via-pink-200 to-pink-50">
+      <!-- Lord Ganesh Image -->
+      <div class="mb-4">
+        <img src="lord_ganesh.avif" alt="Lord Ganesh" class="rounded-full mx-auto shadow-lg w-32 h-32 object-cover" />
+      </div>
+      <h1 class="text-5xl md:text-7xl font-extrabold text-pink-700 mb-6 drop-shadow-md">
+        Yogesh & Priya 💍
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-800 mb-4">We are getting married!</p>
+      <p class="text-lg md:text-xl text-gray-700">
+        Join us on <span class="font-semibold text-pink-600">25th May 2025</span> at <span class="font-semibold text-pink-600">7:00 PM</span>
+      </p>
+      <!-- Countdown -->
+      <div id="countdown" class="text-xl text-pink-800 font-semibold mt-6"></div>
+    </section>
+
+    <!-- Album Section with Swiper -->
+<section id="album" class="py-16 bg-white text-center px-4">
+  <h2 class="text-3xl font-bold text-pink-600 mb-6">Pre-Wedding Memories</h2>
+  <div class="swiper mySwiper max-w-3xl mx-auto">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="image_1.jpeg" class="rounded-lg mx-auto w-2/3 md:w-1/2 object-cover" alt="Photo 1" />
+      </div>
+      <div class="swiper-slide">
+        <img src="image_2.jpeg" class="rounded-lg mx-auto w-2/3 md:w-1/2 object-cover" alt="Photo 2" />
+      </div>
+      <div class="swiper-slide">
+        <img src="image_3.jpeg" class="rounded-lg mx-auto w-2/3 md:w-1/2 object-cover" alt="Photo 3" />
+      </div>
+      <div class="swiper-slide">
+        <div class="aspect-video rounded-lg mx-auto w-full">
+          <iframe
+            id="ytplayer"
+            class="w-full h-full"
+            src="https://www.youtube.com/embed/HpmMpEquoMA?enablejsapi=1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination mt-4"></div>
+  </div>
+</section>
+
+
+    <!-- Love Story Section -->
+<section class="py-16 bg-pink-50 text-center px-4">
+  <h2 class="text-3xl font-bold text-pink-600 mb-4">Our Love Story</h2>
+  <p class="max-w-2xl mx-auto text-gray-700 mb-8">
+    From strangers to soulmates, our journey began with a smile and grew into a lifetime of memories.
+    We've shared laughter, dreams, and everything in between. Now, we're ready to tie the knot!
+  </p>
+
+  <div class="max-w-2xl mx-auto mb-8">
+    <h3 class="text-2xl font-semibold text-pink-600">Our Journey in Moments</h3>
+    <ul class="list-disc text-left mt-4 text-gray-700">
+      <li><strong>Our First Meeting:</strong> A random encounter that turned into something unforgettable.</li>
+      <li><strong>Our First Date:</strong> A cozy coffee shop where we realized we had so much in common.</li>
+      <li><strong>The Proposal:</strong> An unforgettable evening under the stars where we promised forever.</li>
+    </ul>
+  </div>
+
+  <div class="max-w-2xl mx-auto mb-8">
+    <h3 class="text-2xl font-semibold text-pink-600">Fun Facts About Us</h3>
+    <ul class="list-disc text-left mt-4 text-gray-700">
+      <li><strong>Favorite Movie:</strong> "The Notebook" – because it's our love story!</li>
+      <li><strong>Our Favorite Hobby:</strong> Cooking dinner together on weekends.</li>
+      <li><strong>How We Met:</strong> It was at a friend's party, where we bonded over our mutual love for music.</li>
+    </ul>
+  </div>
+
+  <p class="text-xl font-semibold text-pink-600">A Journey We’ll Cherish Forever ❤️</p>
+</section>
+
+
+    <!-- Location Section -->
+    <section id="location" class="py-16 bg-pink-100 text-center px-4">
+      <h2 class="text-3xl font-bold text-pink-700 mb-4">Wedding Location</h2>
+      <p class="text-gray-700 mb-4">Come celebrate with us at:</p>
+      <p class="font-medium text-gray-800 mb-6">Matoshree Narmada Lawns</p>
+      <a
+        href="https://www.google.com/maps?q=Matoshree+Narmada+Lawns,+RXWV+CV2,+Parag+Waje+Nagar,+Shivaji+Nagar,+Sinnar,+Maharashtra+422103"
+        target="_blank"
+        class="inline-block bg-pink-600 text-white px-6 py-3 rounded-full shadow hover:bg-pink-500 transition"
+        >View on Google Maps</a
+      >
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-center py-4 shadow-inner">
+      <p class="text-white">Made with ❤️ by Yogesh & Priya</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: false, // ❌ autoplay disabled
+      });
+
+      // Countdown timer
+      const countdown = () => {
+        const eventDate = new Date("2025-05-25T16:00:00").getTime();
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+
+        if (distance < 0) {
+          document.getElementById("countdown").innerText = "We are now married! 💕";
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerText = `${days}d ${hours}h ${minutes}m ${seconds}s to go!`;
+      };
+
+      setInterval(countdown, 1000);
+
+      // YouTube autoplay pause logic (optional if needed)
+      function onYouTubeIframeAPIReady() {
+        const player = new YT.Player("ytplayer", {
+          events: {
+            onStateChange: function (event) {
+              if (event.data === YT.PlayerState.PLAYING) {
+                swiper.autoplay.stop();
+              } else if (
+                event.data === YT.PlayerState.PAUSED ||
+                event.data === YT.PlayerState.ENDED
+              ) {
+                swiper.autoplay.start();
+              }
+            },
+          },
+        });
+      }
+
+      const tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      document.body.appendChild(tag);
+    </script>
+  </body>
+</html>

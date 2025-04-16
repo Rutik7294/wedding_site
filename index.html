@@ -77,7 +77,7 @@
       </h1>
       <p class="text-lg sm:text-xl md:text-2xl text-gray-800 mb-2">We are getting married!</p>
       <p class="text-lg sm:text-xl md:text-2xl text-gray-700 mb-4 font-semibold">
-        With joy, you are invited to THE WEDDING OF
+        "With joy, you are invited to THE WEDDING OF"
       </p>
       <p class="text-base sm:text-lg md:text-xl text-gray-700">
         Join us on <span class="font-semibold text-pink-600">18th April 2025</span> at <span class="font-semibold text-pink-600">7:00 PM</span>
@@ -229,22 +229,30 @@
         }, 200);
       });
 
-      // Heart Icons Animation
-      function createHeart() {
-        const heart = document.createElement('div');
-        heart.classList.add('heart');
-        heart.innerHTML = '❤️'; // Using emoji as heart
-        heart.style.left = Math.random() * 100 + 'vw';
-        heart.style.animationDuration = 3 + Math.random() * 2 + 's';
-        heart.style.opacity = Math.random();
-        document.body.appendChild(heart);
+      let stopHearts = false;
 
-        setTimeout(() => {
-          heart.remove();
-        }, 5000);
-      }
+  function createHeart() {
+    if (stopHearts) return; // Stop creating hearts if the time has passed
 
-      setInterval(createHeart, 300);
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML = '❤️'; // Using emoji as heart
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = 3 + Math.random() * 2 + 's';
+    heart.style.opacity = Math.random();
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 5000);
+  }
+
+  setInterval(createHeart, 300); // Hearts fall every 300ms
+
+  // Stop the hearts after 10 seconds
+  setTimeout(() => {
+    stopHearts = true; // Prevent any new hearts from being created
+  }, 10000); // 10 seconds
     </script>
   </body>
 </html>

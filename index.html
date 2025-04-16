@@ -17,13 +17,13 @@
     <!-- Navbar -->
     <nav class="bg-black shadow-md fixed w-full top-0 z-50">
       <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div class="text-xl font-bold text-white">Yogesh ❤️ Priya</div>
-        <!-- Hamburger Icon for Mobile -->
+        <div class="text-lg sm:text-xl font-bold text-white">Yogesh ❤️ Priya</div>
+        <!-- Hamburger Icon -->
         <div class="md:hidden">
           <button id="menu-toggle" class="text-white focus:outline-none">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"/>
+                d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
           </button>
         </div>
@@ -47,34 +47,34 @@
     <!-- Home Section -->
     <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center pt-32 px-4 bg-gradient-to-b from-pink-100 via-pink-200 to-pink-50">
       <div class="mb-4">
-        <img src="lord_ganesh.avif" alt="Lord Ganesh" class="rounded-full mx-auto shadow-lg w-32 h-32 object-cover" />
+        <img src="lord_ganesh.avif" alt="Lord Ganesh" class="rounded-full mx-auto shadow-lg w-24 h-24 sm:w-32 sm:h-32 object-cover" />
       </div>
-      <h1 class="text-5xl md:text-7xl font-extrabold text-pink-700 mb-6 drop-shadow-md">
+      <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold text-pink-700 mb-4 drop-shadow-md">
         Yogesh & Priya 💍
       </h1>
-      <p class="text-xl md:text-2xl text-gray-800 mb-4">We are getting married!</p>
-      <p class="text-lg md:text-xl text-gray-700">
+      <p class="text-lg sm:text-xl md:text-2xl text-gray-800 mb-2">We are getting married!</p>
+      <p class="text-base sm:text-lg md:text-xl text-gray-700">
         Join us on <span class="font-semibold text-pink-600">25th May 2025</span> at <span class="font-semibold text-pink-600">7:00 PM</span>
       </p>
-      <div id="countdown" class="text-xl text-pink-800 font-semibold mt-6"></div>
+      <div id="countdown" class="text-base sm:text-lg text-pink-800 font-semibold mt-4"></div>
     </section>
 
     <!-- Album Section -->
-    <section id="album" class="py-16 bg-white text-center px-4">
-      <h2 class="text-3xl font-bold text-pink-600 mb-6">Pre-Wedding Memories</h2>
+    <section id="album" class="py-12 sm:py-16 bg-white text-center px-4">
+      <h2 class="text-2xl sm:text-3xl font-bold text-pink-600 mb-6">Pre-Wedding Memories</h2>
       <div class="swiper mySwiper max-w-3xl mx-auto">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="image_1.jpeg" class="rounded-lg mx-auto w-2/3 md:w-1/2 object-cover" alt="Photo 1" />
+            <img src="image_1.jpeg" class="rounded-lg mx-auto w-full sm:w-2/3 md:w-1/2 object-cover" alt="Photo 1" />
           </div>
           <div class="swiper-slide">
-            <img src="image_2.jpeg" class="rounded-lg mx-auto w-2/3 md:w-1/2 object-cover" alt="Photo 2" />
+            <img src="image_2.jpeg" class="rounded-lg mx-auto w-full sm:w-2/3 md:w-1/2 object-cover" alt="Photo 2" />
           </div>
           <div class="swiper-slide">
-            <img src="image_3.jpeg" class="rounded-lg mx-auto w-2/3 md:w-1/2 object-cover" alt="Photo 3" />
+            <img src="image_3.jpeg" class="rounded-lg mx-auto w-full sm:w-2/3 md:w-1/2 object-cover" alt="Photo 3" />
           </div>
           <div class="swiper-slide">
-            <div class="aspect-video rounded-lg mx-auto w-full">
+            <div class="aspect-video rounded-lg mx-auto w-full sm:w-4/5">
               <iframe
                 id="ytplayer"
                 class="w-full h-full"
@@ -93,46 +93,47 @@
     </section>
 
     <!-- Love Story Section -->
-    <section class="py-16 bg-pink-50 text-center px-4">
-      <h2 class="text-3xl font-bold text-pink-600 mb-4">Our Love Story</h2>
-      <p class="max-w-2xl mx-auto text-gray-700 mb-8">
+    <section class="py-12 sm:py-16 bg-pink-50 text-center px-4">
+      <h2 class="text-2xl sm:text-3xl font-bold text-pink-600 mb-4">Our Love Story</h2>
+      <p class="max-w-2xl mx-auto text-gray-700 mb-6 text-sm sm:text-base">
         From strangers to soulmates, our journey began with a smile and grew into a lifetime of memories.
-        We've shared laughter, dreams, and everything in between. Now, we're ready to tie the knot!
       </p>
-      <div class="max-w-2xl mx-auto mb-8">
-        <h3 class="text-2xl font-semibold text-pink-600">Our Journey in Moments</h3>
-        <ul class="list-disc text-left mt-4 text-gray-700">
-          <li><strong>Our First Meeting:</strong> A random encounter that turned into something unforgettable.</li>
-          <li><strong>Our First Date:</strong> A cozy coffee shop where we realized we had so much in common.</li>
-          <li><strong>The Proposal:</strong> An unforgettable evening under the stars where we promised forever.</li>
-        </ul>
+      <div class="max-w-2xl mx-auto text-left text-gray-700 space-y-6 text-sm sm:text-base">
+        <div>
+          <h3 class="text-xl font-semibold text-pink-600 mb-2">Our Journey in Moments</h3>
+          <ul class="list-disc ml-5 space-y-1">
+            <li><strong>Our First Meeting:</strong> A random encounter that turned unforgettable.</li>
+            <li><strong>Our First Date:</strong> A cozy coffee shop where we connected instantly.</li>
+            <li><strong>The Proposal:</strong> A night under the stars and a promise of forever.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-pink-600 mb-2">Fun Facts About Us</h3>
+          <ul class="list-disc ml-5 space-y-1">
+            <li><strong>Favorite Movie:</strong> "The Notebook" – it's our story too!</li>
+            <li><strong>Hobby:</strong> Cooking dinner together on weekends.</li>
+            <li><strong>How We Met:</strong> A party + shared music taste = sparks ✨</li>
+          </ul>
+        </div>
       </div>
-      <div class="max-w-2xl mx-auto mb-8">
-        <h3 class="text-2xl font-semibold text-pink-600">Fun Facts About Us</h3>
-        <ul class="list-disc text-left mt-4 text-gray-700">
-          <li><strong>Favorite Movie:</strong> "The Notebook" – because it's our love story!</li>
-          <li><strong>Our Favorite Hobby:</strong> Cooking dinner together on weekends.</li>
-          <li><strong>How We Met:</strong> It was at a friend's party, where we bonded over our mutual love for music.</li>
-        </ul>
-      </div>
-      <p class="text-xl font-semibold text-pink-600">A Journey We’ll Cherish Forever ❤️</p>
+      <p class="text-lg font-semibold text-pink-600 mt-6">A Journey We’ll Cherish Forever ❤️</p>
     </section>
 
     <!-- Location Section -->
-    <section id="location" class="py-16 bg-pink-100 text-center px-4">
-      <h2 class="text-3xl font-bold text-pink-700 mb-4">Wedding Location</h2>
-      <p class="text-gray-700 mb-4">Come celebrate with us at:</p>
-      <p class="font-medium text-gray-800 mb-6">Matoshree Narmada Lawns</p>
-      <a
-        href="https://www.google.com/maps?q=Matoshree+Narmada+Lawns,+RXWV+CV2,+Parag+Waje+Nagar,+Shivaji+Nagar,+Sinnar,+Maharashtra+422103"
+    <section id="location" class="py-12 sm:py-16 bg-pink-100 text-center px-4">
+      <h2 class="text-2xl sm:text-3xl font-bold text-pink-700 mb-4">Wedding Location</h2>
+      <p class="text-gray-700 mb-2 text-sm sm:text-base">Come celebrate with us at:</p>
+      <p class="font-medium text-gray-800 mb-4 text-base sm:text-lg">Matoshree Narmada Lawns</p>
+      <a href="https://www.google.com/maps?q=Matoshree+Narmada+Lawns,+RXWV+CV2,+Parag+Waje+Nagar,+Shivaji+Nagar,+Sinnar,+Maharashtra+422103"
         target="_blank"
-        class="inline-block bg-pink-600 text-white px-6 py-3 rounded-full shadow hover:bg-pink-500 transition"
-        >View on Google Maps</a>
+        class="inline-block bg-pink-600 text-white px-6 py-3 rounded-full shadow hover:bg-pink-500 transition">
+        View on Google Maps
+      </a>
     </section>
 
     <!-- Footer -->
     <footer class="bg-black text-center py-4 shadow-inner">
-      <p class="text-white">Made with ❤️ by Yogesh & Priya</p>
+      <p class="text-white text-sm sm:text-base">Made with ❤️ by Yogesh & Priya</p>
     </footer>
 
     <!-- Scripts -->
@@ -149,22 +150,19 @@
         },
         spaceBetween: 30,
         centeredSlides: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
+        autoplay: false,
       });
 
-      const menuToggle = document.getElementById("menu-toggle");
-      const mobileMenu = document.getElementById("mobile-menu");
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
 
-      menuToggle.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
       });
 
-      mobileMenu.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.add("hidden");
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
         });
       });
 
@@ -185,7 +183,6 @@
 
         document.getElementById("countdown").innerText = `${days}d ${hours}h ${minutes}m ${seconds}s to go!`;
       };
-
       setInterval(countdown, 1000);
 
       function onYouTubeIframeAPIReady() {
@@ -194,10 +191,7 @@
             onStateChange: function (event) {
               if (event.data === YT.PlayerState.PLAYING) {
                 swiper.autoplay.stop();
-              } else if (
-                event.data === YT.PlayerState.PAUSED ||
-                event.data === YT.PlayerState.ENDED
-              ) {
+              } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
                 swiper.autoplay.start();
               }
             },

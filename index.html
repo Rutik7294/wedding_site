@@ -20,8 +20,8 @@
         position: fixed;
         top: -50px;
         z-index: 10;
-        font-size: 2rem; /* Size of the heart icon */
-        color: red; /* Heart color */
+        font-size: 2rem;
+        color: red;
         animation: fall linear infinite;
         opacity: 0.8;
         pointer-events: none;
@@ -56,6 +56,7 @@
           <li><a href="#home" class="hover:text-pink-200 transition-all">Home</a></li>
           <li><a href="#album" class="hover:text-pink-200 transition-all">Album</a></li>
           <li><a href="#location" class="hover:text-pink-200 transition-all">Location</a></li>
+          <li><a href="#contact" class="hover:text-pink-200 transition-all">Contact</a></li> <!-- Added Contact link -->
         </ul>
       </div>
       <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
@@ -63,6 +64,7 @@
           <li><a href="#home" class="hover:text-pink-200 transition-all">Home</a></li>
           <li><a href="#album" class="hover:text-pink-200 transition-all">Album</a></li>
           <li><a href="#location" class="hover:text-pink-200 transition-all">Location</a></li>
+          <li><a href="#contact" class="hover:text-pink-200 transition-all">Contact</a></li> <!-- Added Contact link -->
         </ul>
       </div>
     </nav>
@@ -157,10 +159,29 @@
       </a>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 sm:py-16 bg-white text-center px-4">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-pink-700 mb-4">Contact Us</h2>
+      <p class="text-gray-700 mb-2 text-base sm:text-lg">Want a beautiful wedding website like this?</p>
+      <p class="text-lg text-pink-600 font-semibold mb-4">Message me on WhatsApp to get yours made! 💬</p>
+      <a href="https://wa.me/91XXXXXXXXXX" target="_blank"
+        class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full transition duration-300">
+        Chat with Me
+      </a>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-black text-center py-4 shadow-inner">
       <p class="text-white text-sm sm:text-base">Made with ❤️ by Ram & Priya</p>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/91XXXXXXXXXX" target="_blank"
+      class="fixed right-4 bottom-4 bg-green-500 text-white flex items-center gap-2 px-4 py-2 rounded-full shadow-lg hover:bg-green-600 z-50"
+      title="Want a website like this? Message me!">
+      <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png" alt="WhatsApp" />
+      Contact Me
+    </a>
 
     <!-- Scripts -->
     <script>
@@ -215,44 +236,6 @@
 
       countdown();
       setInterval(countdown, 1000);
-
-      // ✅ Navbar hide/show on scroll
-      const navbar = document.querySelector('nav');
-      let isScrolling;
-
-      window.addEventListener('scroll', () => {
-        navbar.classList.add('-translate-y-full'); // Hide navbar
-        clearTimeout(isScrolling);
-
-        isScrolling = setTimeout(() => {
-          navbar.classList.remove('-translate-y-full'); // Show navbar
-        }, 200);
-      });
-
-      let stopHearts = false;
-
-  function createHeart() {
-    if (stopHearts) return; // Stop creating hearts if the time has passed
-
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    heart.innerHTML = '❤️'; // Using emoji as heart
-    heart.style.left = Math.random() * 100 + 'vw';
-    heart.style.animationDuration = 3 + Math.random() * 2 + 's';
-    heart.style.opacity = Math.random();
-    document.body.appendChild(heart);
-
-    setTimeout(() => {
-      heart.remove();
-    }, 5000);
-  }
-
-  setInterval(createHeart, 300); // Hearts fall every 300ms
-
-  // Stop the hearts after 10 seconds
-  setTimeout(() => {
-    stopHearts = true; // Prevent any new hearts from being created
-  }, 10000); // 10 seconds
     </script>
   </body>
 </html>

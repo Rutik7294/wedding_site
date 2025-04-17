@@ -89,31 +89,32 @@
 
 
     <!-- Navbar -->
-    <nav class="bg-gradient-to-r from-pink-600 to-pink-700 shadow-md fixed w-full top-0 z-50 transition-transform duration-300">
-      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div class="text-xl sm:text-2xl font-extrabold text-white">Ram ❤️ Priya</div>
-        <div class="md:hidden">
-          <button id="menu-toggle" class="text-white focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </button>
-        </div>
-        <ul class="hidden md:flex space-x-6 text-white font-medium">
-          <li><a href="#home" class="hover:text-pink-200 transition-all">Home</a></li>
-          <li><a href="#album" class="hover:text-pink-200 transition-all">Album</a></li>
-          <li><a href="#location" class="hover:text-pink-200 transition-all">Location</a></li>
-        </ul>
-      </div>
-      <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-        <ul class="flex flex-col space-y-4 text-white font-medium">
-          <li><a href="#home" class="hover:text-pink-200 transition-all">Home</a></li>
-          <li><a href="#album" class="hover:text-pink-200 transition-all">Album</a></li>
-          <li><a href="#location" class="hover:text-pink-200 transition-all">Location</a></li>
-        </ul>
-      </div>
-    </nav>
+<nav class="bg-black shadow-md fixed w-full top-0 z-50 transition-transform duration-300">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="text-xl sm:text-2xl font-extrabold text-white">Ram ❤️ Priya</div>
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <ul class="hidden md:flex space-x-6 text-white font-medium">
+      <li><a href="#home" class="hover:text-pink-200 transition-all">Home</a></li>
+      <li><a href="#album" class="hover:text-pink-200 transition-all">Album</a></li>
+      <li><a href="#location" class="hover:text-pink-200 transition-all">Location</a></li>
+    </ul>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+    <ul class="flex flex-col space-y-4 text-white font-medium">
+      <li><a href="#home" class="hover:text-pink-200 transition-all">Home</a></li>
+      <li><a href="#album" class="hover:text-pink-200 transition-all">Album</a></li>
+      <li><a href="#location" class="hover:text-pink-200 transition-all">Location</a></li>
+    </ul>
+  </div>
+</nav>
+
 
    
     <!-- Home Section -->
@@ -135,37 +136,38 @@
     </section>
 
     <!-- Album Section -->
-    <section id="album" class="py-12 sm:py-16 bg-white text-center px-4">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-pink-600 mb-6">Pre-Wedding Memories</h2>
-      <div class="swiper mySwiper max-w-4xl mx-auto">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="image_1.jpeg" class="rounded-lg mx-auto w-full sm:w-2/3 md:w-1/2 object-cover" alt="Photo 1" />
-          </div>
-          <div class="swiper-slide">
-            <img src="image_2.jpeg" class="rounded-lg mx-auto w-full sm:w-2/3 md:w-1/2 object-cover" alt="Photo 2" />
-          </div>
-          <div class="swiper-slide">
-            <img src="image_3.jpeg" class="rounded-lg mx-auto w-full sm:w-2/3 md:w-1/2 object-cover" alt="Photo 3" />
-          </div>
-          <div class="swiper-slide">
-            <div class="aspect-video rounded-lg mx-auto w-full sm:w-4/5">
-              <iframe
-                id="ytplayer"
-                class="w-full h-full"
-                src="https://www.youtube.com/embed/HpmMpEquoMA?enablejsapi=1"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination mt-4"></div>
+<section id="album" class="py-12 sm:py-16 bg-white text-center px-4">
+  <h2 class="text-3xl sm:text-4xl font-extrabold text-pink-600 mb-6">Pre-Wedding Memories</h2>
+  <div class="swiper mySwiper max-w-4xl mx-auto">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="image_1.jpeg" class="rounded-lg mx-auto w-full sm:w-2/3 md:w-1/2 object-cover" alt="Photo 1" />
       </div>
-    </section>
+      <div class="swiper-slide">
+        <img src="image_2.jpeg" class="rounded-lg mx-auto w-full sm:w-2/3 md:w-1/2 object-cover" alt="Photo 2" />
+      </div>
+      <div class="swiper-slide">
+        <img src="image_3.jpeg" class="rounded-lg mx-auto w-full sm:w-2/3 md:w-1/2 object-cover" alt="Photo 3" />
+      </div>
+      <div class="swiper-slide">
+        <div class="aspect-video rounded-lg mx-auto w-full sm:w-4/5">
+          <iframe
+            id="ytplayer"
+            class="w-full h-full"
+            src="https://www.youtube.com/embed/HpmMpEquoMA?enablejsapi=1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination mt-4"></div>
+  </div>
+</section>
+
 
     <!-- Love Story Section -->
     <section class="py-12 sm:py-16 bg-pink-50 text-center px-4">

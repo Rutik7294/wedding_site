@@ -196,6 +196,61 @@
       <p class="text-lg font-semibold text-pink-600 mt-6">A Journey We’ll Cherish Forever ❤️</p>
     </section>
 
+    <!-- Love Quotes Slider -->
+    <section class="bg-white py-12 px-4 text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold text-pink-600 mb-4">Love Quotes</h2>
+      <div class="swiper loveSwiper max-w-xl mx-auto">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide text-lg text-gray-700">"Love is composed of a single soul inhabiting two bodies." – Aristotle</div>
+          <div class="swiper-slide text-lg text-gray-700">"In all the world, there is no heart for me like yours." – Maya Angelou</div>
+          <div class="swiper-slide text-lg text-gray-700">"You are my today and all of my tomorrows." – Leo Christopher</div>
+        </div>
+        <div class="swiper-pagination mt-4"></div>
+      </div>
+    </section>
+
+    <!-- Guest Wishes Section -->
+<section class="bg-pink-50 py-12 px-4 text-center">
+  <h2 class="text-2xl sm:text-3xl font-bold text-pink-700 mb-4">Send Us Your Wishes</h2>
+  <textarea id="wishMessage" placeholder="Leave your wish here..." class="w-full max-w-lg mx-auto border border-pink-300 p-3 rounded mb-4"></textarea>
+  <button onclick="sendWishToWhatsApp()" class="bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-500">Send Wish</button>
+</section>
+
+    <!-- RSVP Form -->
+<section class="bg-white py-12 px-4 text-center">
+  <h2 class="text-2xl sm:text-3xl font-bold text-pink-700 mb-4">RSVP</h2>
+  <form class="max-w-lg mx-auto space-y-4">
+    <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded" required />
+    <input type="text" placeholder="Your Location" class="w-full p-3 border border-gray-300 rounded" required />
+    <select class="w-full p-3 border border-gray-300 rounded">
+      <option>Will attend</option>
+      <option>Maybe</option>
+      <option>Can't attend</option>
+    </select>
+    <button class="bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-500">Submit</button>
+  </form>
+</section>
+
+   <!-- Background Music (Plays automatically when site is opened for 20 seconds) -->
+<audio id="background-music" autoplay>
+  <source src="piano_music.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+
+
+    <!-- Lightbox Script (Optional for Album Images) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <!-- AOS Init -->
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    </script>
+
     <!-- Location Section -->
     <section id="location" class="py-12 sm:py-16 bg-pink-100 text-center px-4">
       <h2 class="text-3xl sm:text-4xl font-extrabold text-pink-700 mb-4">Wedding Location</h2>
@@ -215,6 +270,47 @@
 
     <!-- Scripts -->
     <script>
+
+      // Automatically stop the music after 20 seconds
+  window.onload = function() {
+    var audio = document.getElementById('background-music');
+    setTimeout(function() {
+      audio.pause();
+    }, 20000); // 20 seconds
+  };
+
+
+
+
+
+function sendWishToWhatsApp() {
+    const message = document.getElementById("wishMessage").value.trim();
+    if (!message) {
+      alert("Please write a wish before sending!");
+      return;
+    }
+
+    // Replace with bride or groom's WhatsApp number, no + or dashes, just digits
+    const phoneNumber = "919876543210"; // Example: +91 9876543210
+
+    const encodedMessage = encodeURIComponent("Wishing you both: " + message);
+    const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(url, "_blank");
+  }
+
+      // Love Quotes Swiper
+      new Swiper(".loveSwiper", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 5000,
+        },
+      });
+
+
       const swiper = new Swiper(".mySwiper", {
         loop: true,
         navigation: {

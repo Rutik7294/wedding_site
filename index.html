@@ -20,8 +20,8 @@
         position: fixed;
         top: -50px;
         z-index: 10;
-        font-size: 2rem;
-        color: red;
+        font-size: 2rem; /* Size of the heart icon */
+        color: red; /* Heart color */
         animation: fall linear infinite;
         opacity: 0.8;
         pointer-events: none;
@@ -36,10 +36,58 @@
           transform: translateY(100vh) rotate(360deg);
           opacity: 0;
         }
+      
       }
+
+      /* WhatsApp Floating Button */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        color: white;
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+        background-color: #20ba5a;
+      }
+
+
+
     </style>
   </head>
   <body class="bg-pink-50 font-sans">
+
+    <!-- WhatsApp Floating Icon -->
+    <a
+      href="https://wa.me/91234567890"
+      target="_blank"
+      class="whatsapp-float"
+      aria-label="Chat on WhatsApp"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-7 w-7"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M20.52 3.48A11.79 11.79 0 0 0 12 0a11.8 11.8 0 0 0-10.3 17.65L0 24l6.49-1.69A11.8 11.8 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.25-6.19-3.48-8.52ZM12 22a9.77 9.77 0 0 1-5.2-1.51l-.37-.23-3.85 1 1-3.74-.24-.39A9.82 9.82 0 1 1 12 22Zm5.39-7.36c-.3-.15-1.77-.87-2.05-.97s-.47-.15-.67.15-.77.96-.94 1.16-.35.22-.65.07a7.98 7.98 0 0 1-2.35-1.45 8.83 8.83 0 0 1-1.63-2.02c-.17-.29 0-.45.13-.6.13-.15.29-.36.44-.54.15-.18.2-.3.3-.49.1-.2.05-.37 0-.52s-.66-1.59-.91-2.2c-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.08-.79.37-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1 2.1 3.21 5.1 4.5c.71.3 1.27.47 1.7.6.72.23 1.37.2 1.88.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.06-.12-.26-.2-.56-.35Z"
+        />
+      </svg>
+    </a>
+
+
     <!-- Navbar -->
     <nav class="bg-gradient-to-r from-pink-600 to-pink-700 shadow-md fixed w-full top-0 z-50 transition-transform duration-300">
       <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
@@ -56,7 +104,6 @@
           <li><a href="#home" class="hover:text-pink-200 transition-all">Home</a></li>
           <li><a href="#album" class="hover:text-pink-200 transition-all">Album</a></li>
           <li><a href="#location" class="hover:text-pink-200 transition-all">Location</a></li>
-          <li><a href="#contact" class="hover:text-pink-200 transition-all">Contact</a></li> <!-- Added Contact link -->
         </ul>
       </div>
       <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
@@ -64,11 +111,11 @@
           <li><a href="#home" class="hover:text-pink-200 transition-all">Home</a></li>
           <li><a href="#album" class="hover:text-pink-200 transition-all">Album</a></li>
           <li><a href="#location" class="hover:text-pink-200 transition-all">Location</a></li>
-          <li><a href="#contact" class="hover:text-pink-200 transition-all">Contact</a></li> <!-- Added Contact link -->
         </ul>
       </div>
     </nav>
 
+   
     <!-- Home Section -->
     <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center pt-32 px-4 bg-gradient-to-b from-pink-100 via-pink-200 to-pink-50">
       <div class="mb-4 flex justify-center items-center">
@@ -159,29 +206,10 @@
       </a>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-12 sm:py-16 bg-white text-center px-4">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-pink-700 mb-4">Contact Us</h2>
-      <p class="text-gray-700 mb-2 text-base sm:text-lg">Want a beautiful wedding website like this?</p>
-      <p class="text-lg text-pink-600 font-semibold mb-4">Message me on WhatsApp to get yours made! 💬</p>
-      <a href="https://wa.me/91XXXXXXXXXX" target="_blank"
-        class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full transition duration-300">
-        Chat with Me
-      </a>
-    </section>
-
     <!-- Footer -->
     <footer class="bg-black text-center py-4 shadow-inner">
       <p class="text-white text-sm sm:text-base">Made with ❤️ by Ram & Priya</p>
     </footer>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/91XXXXXXXXXX" target="_blank"
-      class="fixed right-4 bottom-4 bg-green-500 text-white flex items-center gap-2 px-4 py-2 rounded-full shadow-lg hover:bg-green-600 z-50"
-      title="Want a website like this? Message me!">
-      <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png" alt="WhatsApp" />
-      Contact Me
-    </a>
 
     <!-- Scripts -->
     <script>
@@ -236,6 +264,44 @@
 
       countdown();
       setInterval(countdown, 1000);
+
+      // ✅ Navbar hide/show on scroll
+      const navbar = document.querySelector('nav');
+      let isScrolling;
+
+      window.addEventListener('scroll', () => {
+        navbar.classList.add('-translate-y-full'); // Hide navbar
+        clearTimeout(isScrolling);
+
+        isScrolling = setTimeout(() => {
+          navbar.classList.remove('-translate-y-full'); // Show navbar
+        }, 200);
+      });
+
+      let stopHearts = false;
+
+  function createHeart() {
+    if (stopHearts) return; // Stop creating hearts if the time has passed
+
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML = '❤️'; // Using emoji as heart
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = 3 + Math.random() * 2 + 's';
+    heart.style.opacity = Math.random();
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 5000);
+  }
+
+  setInterval(createHeart, 300); // Hearts fall every 300ms
+
+  // Stop the hearts after 10 seconds
+  setTimeout(() => {
+    stopHearts = true; // Prevent any new hearts from being created
+  }, 10000); // 10 seconds
     </script>
   </body>
 </html>

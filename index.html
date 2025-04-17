@@ -89,7 +89,7 @@
 
 
     <!-- Navbar -->
-<nav class="bg-black shadow-md fixed w-full top-0 z-50 transition-transform duration-300">
+<nav class="bg-pink-500 shadow-md fixed w-full top-0 z-50 transition-transform duration-300">
   <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
     <div class="text-xl sm:text-2xl font-extrabold text-white">Ram ❤️ Priya</div>
     <div class="md:hidden">
@@ -197,17 +197,19 @@
     </section>
 
     <!-- Love Quotes Slider -->
-    <section class="bg-white py-12 px-4 text-center">
-      <h2 class="text-2xl sm:text-3xl font-bold text-pink-600 mb-4">Love Quotes</h2>
-      <div class="swiper loveSwiper max-w-xl mx-auto">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide text-lg text-gray-700">"Love is composed of a single soul inhabiting two bodies." – Aristotle</div>
-          <div class="swiper-slide text-lg text-gray-700">"In all the world, there is no heart for me like yours." – Maya Angelou</div>
-          <div class="swiper-slide text-lg text-gray-700">"You are my today and all of my tomorrows." – Leo Christopher</div>
-        </div>
-        <div class="swiper-pagination mt-4"></div>
-      </div>
-    </section>
+<section class="bg-white py-12 px-4 text-center">
+  <h2 class="text-2xl sm:text-3xl font-bold text-pink-600 mb-4">Love Quotes</h2>
+  <div class="swiper loveSwiper max-w-xl mx-auto px-2 sm:px-4">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide px-4 text-base sm:text-lg text-gray-700 leading-relaxed">"Love is composed of a single soul inhabiting two bodies." – Aristotle</div>
+      <div class="swiper-slide px-4 text-base sm:text-lg text-gray-700 leading-relaxed">"In all the world, there is no heart for me like yours." – Maya Angelou</div>
+      <div class="swiper-slide px-4 text-base sm:text-lg text-gray-700 leading-relaxed">"You are my today and all of my tomorrows." – Leo Christopher</div>
+      <div class="swiper-slide px-4 text-base sm:text-lg text-gray-700 leading-relaxed">"I look at you and see the rest of my life in front of my eyes." – Unknown</div>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- Guest Wishes Section -->
 <section class="bg-pink-50 py-12 px-4 text-center">
@@ -219,17 +221,18 @@
     <!-- RSVP Form -->
 <section class="bg-white py-12 px-4 text-center">
   <h2 class="text-2xl sm:text-3xl font-bold text-pink-700 mb-4">RSVP</h2>
-  <form class="max-w-lg mx-auto space-y-4">
-    <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded" required />
-    <input type="text" placeholder="Your Location" class="w-full p-3 border border-gray-300 rounded" required />
-    <select class="w-full p-3 border border-gray-300 rounded">
+  <form id="rsvpForm" class="max-w-lg mx-auto space-y-4">
+    <input type="text" id="rsvpName" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded" required />
+    <input type="text" id="rsvpLocation" placeholder="Your Location" class="w-full p-3 border border-gray-300 rounded" required />
+    <select id="rsvpStatus" class="w-full p-3 border border-gray-300 rounded">
       <option>Will attend</option>
       <option>Maybe</option>
       <option>Can't attend</option>
     </select>
-    <button class="bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-500">Submit</button>
+    <button type="submit" class="bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-500">Submit</button>
   </form>
 </section>
+
 
    <!-- Background Music (Plays automatically when site is opened for 20 seconds) -->
 <audio id="background-music" autoplay>
@@ -264,7 +267,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black text-center py-4 shadow-inner">
+    <footer class="bg-pink-500 text-center py-4 shadow-inner">
       <p class="text-white text-sm sm:text-base">Made with ❤️ by Ram & Priya</p>
     </footer>
 
@@ -401,5 +404,40 @@ function sendWishToWhatsApp() {
     stopHearts = true; // Prevent any new hearts from being created
   }, 10000); // 10 seconds
     </script>
+
+
+  <script>
+  document.getElementById("rsvpForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("rsvpName").value;
+    const location = document.getElementById("rsvpLocation").value;
+    const status = document.getElementById("rsvpStatus").value;
+
+    const phoneNumber = "919876543210"; // Replace with groom/bride's WhatsApp number (no + sign)
+    const message = `RSVP Confirmation:%0AName: ${name}%0ALocation: ${location}%0AStatus: ${status}`;
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    window.open(whatsappURL, "_blank");
+  });
+
+  var loveSwiper = new Swiper(".loveSwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+
+
+
+
+</script>
+
+
+
+
+
+
   </body>
 </html>
